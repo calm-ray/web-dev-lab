@@ -1,0 +1,73 @@
+body {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    width: 100%;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;  /* keeps it centered */
+    padding: 0 20px; /* some breathing room */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.navbar-header img {
+    padding: 0 20px;
+    max-height: 17px;
+}
+
+.navbar-text a {
+    color: #424242;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.navbar-text a:hover {
+    color: #387ed1;
+}
+
+.image-container img {
+    max-width: 1000px; /* adjust size */
+    width: 100%;      /* makes it responsive */
+    margin: 0 auto;
+    display: block;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    text-align: center;
+    color: #424242;
+}
+
+p {
+    color: #424242;
+    text-align: center;
+}
+
+.txt button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #387ed1;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0) !important;
+    border-radius: 3px;
+
+    padding: 10px 30px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+}
