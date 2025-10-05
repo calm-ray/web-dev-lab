@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+</head>
+<body>
+	<input type="text"></input>
+	<button onclick="addTodo()">Add Todo</button>
+	<div id="todos"></div>
+	<script>
+		let todos = []
+		function addTodo() {
+			todos.push({
+				title: document.querySelector("input").value
+			});
+			render();
+		}
+
+		function deleteTodo() {
+			document.querySelector("#todos").addEventListener("click", (e) => {
+				console.log("delete clicked");
+				
+				const classList = e.target.classList;
+
+				if(classList.contains("delete")) {
+
+					const idToRemove = Number(e.target.parentElement.getAttribute("id"))
+					todos.splice(idToRemove, 1);
+				}
+
+				render();
+			})
+		}
+
+		function render() {
+			const todosElement = document.querySelector("#todos");
+			todosElement.innerHTML = ""
+
+			for (let i = 0; i < todos.length; i++) {
+				const todoDiv = document.createElement("div");
+				const todoText = document.createElement("h4");
+				const newToDoDel = document.createElement("button");
+				
+				todoDiv.setAttribute("id", i);
+				todoText.setAttribute("id", "todo");
+				newToDoDel.setAttribute("class", "delete")
+
+				todoText.textContent = todos[i].title;
+				newToDoDel.textContent = "Delete";
+
+				newToDoDel.addEventListener("click", () => {
+					todos.splice(i, 1);
+					render();
+				});
+
+				todoDiv.append(todoText, newToDoDel);
+
+				todosElement.appendChild(todoDiv);
+			}
+		}
+	</script>
+</body>
+</html>
