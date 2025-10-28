@@ -1,0 +1,17 @@
+[
+    {
+        "userId": 1,
+        "userName": "Ankur",
+        "todos": [
+            {
+                "todoId": 2,
+                "todoDescription": "Go to gold shop"
+            }
+        ]
+    },
+    {
+        "userId": 2,
+        "userName": "Mahesh",
+        "todos": []
+    }
+]
